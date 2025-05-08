@@ -1,0 +1,20 @@
+{
+  "products": {
+    "productOne": "Sauce Labs Backpack",
+    "productTwo": "Sauce Labs Bike Light",
+    "productThree": "Sauce Labs Bolt T-Shirt",
+    "productFour": "Sauce Labs Fleece Jacket",
+    "productFive": "Sauce Labs Onesie",
+    "productSix": "Test.allTheThings() T-Shirt (Red)"
+  },
+    "users": {
+      "firstUser": "standard_user",
+      "secondUser": "locked_out_user",
+        "thirdUser": "problem_user"
+    },
+  "checkoutData": {
+    "firstName": "Ayman",
+    "lastName": "ElGendy",
+    "postalCode": "12345"
+  }
+}
