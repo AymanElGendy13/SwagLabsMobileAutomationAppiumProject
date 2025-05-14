@@ -32,6 +32,7 @@ public class EndToEndScenarios extends BaseTest {
     }
 
 
+    // Login --> Select Products --> Add to Cart --> Checkout --> Finish Order --> Back Home
     @Test(priority = 1,groups = {"Regression"})
     public void ValidScenarioCompleteUserFlow() {
         loginPage.loginWithAutoFill(testData.getJsonData("users.firstUser"));
@@ -65,6 +66,7 @@ public class EndToEndScenarios extends BaseTest {
     }
 
 
+    // Login --> Select Products --> select specific filters for products --> Add to Cart --> Checkout --> Finish Order --> Back Home
     @Test(priority = 2)
     public void ValidScenarioProductsDisplayOptions() {
         loginPage.loginWithAutoFill(testData.getJsonData("users.firstUser"));
@@ -97,6 +99,7 @@ public class EndToEndScenarios extends BaseTest {
         softAssert.assertAll();
     }
 
+    // Login --> filter and select products --> delete product --> add to cart --> checkout --> confirmation page --> cancel confirmation page --> delete product --> return home
     @Test(priority = 5)
     public void ValidScenarioUserFlowWithDifferentFeatures()
     {
@@ -128,6 +131,7 @@ public class EndToEndScenarios extends BaseTest {
 
     }
 
+    // Login --> open menu --> open web view --> enter URL --> go to site --> open drawing area --> draw on drawing area --> clear drawing --> draw on drawing area again --> save drawing to gallery --> open gallery
     @Test(priority = 6)
     public void ValidScenarioSecondaryAppFeaturesFlow() throws InterruptedException {
 
@@ -144,6 +148,7 @@ public class EndToEndScenarios extends BaseTest {
                            .openGallery();
     }
 
+    // Login --> open specific product page --> select product --> checkout --> fill checkout --> confirm --> successful --> return homepage
     @Test(priority = 3,groups = {"Regression"})
     public void ValidScenarioUserFlowForPrices() {
         loginPage.loginWithAutoFill(testData.getJsonData("users.firstUser"));
@@ -174,6 +179,7 @@ public class EndToEndScenarios extends BaseTest {
 
     }
 
+    // Invalid Scenario --> login normal user --> logout --> login with locked out user --> check error message
     @Test(priority = 4)
     public void InvalidScenarioUserFlow() {
         loginPage.login(testData.getJsonData("users.firstUser"), loginPage.extractPassword());
